@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de bicicletas especializada em mountain bikes, estradeiras e acessórios.">
+    <meta name="keywords" content="bicicletas, mountain bike, estrada, ciclismo, loja online">
+    <meta name="author" content="Seu Nome">
+    <title>Bike Stores - As Melhores Bicicletas</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- Carrossel Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Bike Stores</h1>
+            <div class="menu-hamburguer" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Em destaque</a></li>
+                <li><a href="#">Promoções</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Carrossel de Imagens -->
+    <div id="carousel-imagens">
+        <img src="./imagem/bike top.jpg" alt="Imagem de bicicleta 1">
+        <img src="./imagem/bike speed.jpg" alt="Imagem de ciclista em ação">
+        <img src="./imagem/trilha.jpg" alt="Imagem de uma bicicleta estradeira">
+    </div>
+
+    <!-- Seção Sobre a Loja -->
+    <section id="sobre-a-loja" class="container">
+        <div class="container-flex">
+            <img src="./imagem/loja da bike.jpeg" alt="Fachada da loja Bike Stores" class="sobre-imagem">
+            <div class="sobre-texto">
+                <h2>Sobre a Bike Stores</h2>
+                <p>Nós oferecemos as melhores bicicletas do mercado, com uma variedade de opções para mountain bikes, bicicletas de estrada e acessórios para ciclistas profissionais e amadores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="container">
+        <h2>Nossos Produtos</h2>
+        <div class="grid-produtos">
+            <article class="produto">
+                <img src="./imagem/bike camp.jpg" alt="Bicicleta para estrada">
+                <h3>Bicicleta de Estrada</h3>
+                <p>Bicicleta leve e rápida, ideal para longas distâncias em estradas.</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </article>
+            <article class="produto">
+                <img src="./imagem/bike estradeira.jpeg" alt="Bicicleta própria para terrenos">
+                <h3>Mountain Bike</h3>
+                <p>Perfeita para trilhas e terrenos acidentados.</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </article>
+            <article class="produto">
+                <img src="./imagem/bike hibrida.jpg" alt="Bicicleta híbrida">
+                <h3>Bicicleta Híbrida</h3>
+                <p>Combina o melhor de uma bicicleta urbana e de trilha.</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </article>
+            <article class="produto">
+                <img src="./imagem/bmx.jpg" alt="BMX">
+                <h3>BMX</h3>
+                <p>Ideal para manobras e pistas de terra.</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bike Stores. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JQuery e Scripts do Carrossel -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#carousel-imagens').slick({
+                autoplay:true,
+                autoplaySpeed: 3000,
+                dots: true
+            });
+
+            $('.menu-hamburguer').click(function(){
+                $('nav').slideToggle(); // Alterado para selecionar o elemento <nav> diretamente
+            });
+        });
+    </script>		
+</body>
+</html>
